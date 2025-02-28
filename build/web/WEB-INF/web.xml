@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>AddingServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.AddingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubtractServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.SubtractServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MultiplyServlet</servlet-name>
+        <servlet-class>za.ac.tut.web.MultiplyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddingServlet</servlet-name>
+        <url-pattern>/AddingServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubtractServlet</servlet-name>
+        <url-pattern>/SubtractServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MultiplyServlet</servlet-name>
+        <url-pattern>/MultiplyServlet.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!--404 FILE NOT FOUND-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/file_not_found.jsp</location>
+    </error-page>
+    <!--NumberFormatterException-->
+    <error-page>
+        <exception-type>java.lang.NumberFormatException</exception-type>
+        <location>/number_format.jsp</location>
+    </error-page>
+    <!--Negative NUmber NumberException-->
+    <error-page>
+        <exception-type>za.ac.tut.business.NumberException</exception-type>
+        <location>/number_exception.jsp</location>
+    </error-page>
+</web-app>
