@@ -12,7 +12,8 @@ This is a **web-based Java application** that performs arithmetic operations (ad
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/birdiey/Arithmetic-Web-App-With-Exceptions.git
+   git clone https
+   ://github.com/birdiey/Arithmetic-Web-App-With-Exceptions.git
 
 
    ## Code Structure
@@ -31,7 +32,7 @@ This is a **web-based Java application** that performs arithmetic operations (ad
 
 - **JSP Files**:
   - `sum_outcome.jsp`: Displays the result of addition.
-  - `subtr.jsp`: Displays the result of subtraction.
+  - `subtr.jsp`: Displays the result of subtraction.hjkk
   - `mult_outcome.jsp`: Displays the result of multiplication.
   - `number_exception.jsp`: Displays custom exception messages.
   - `number_format.jsp`: Displays format-related exception messages.
